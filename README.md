@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spring Boot CRUD Application
 
 A simple Spring Boot application for performing CRUD operations on Items.
@@ -99,3 +100,6 @@ Access the H2 console at: `http://localhost:8080/h2-console`
 - JDBC URL: `jdbc:h2:mem:itemdb`
 - Username: `sa`
 - Password: (leave empty)
+=======
+# demo
+>>>>>>> 19fd0eff52fe43b622ecb1720c2f4c2972034e86
