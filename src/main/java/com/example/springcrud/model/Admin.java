@@ -9,13 +9,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Admin {
 
     @Id
-    private String id;
+    private String id; 
 
     private String username;
     private String email;
 
     // Store HASHED password only (BCrypt)
-    private String passwordHash;
+    private String password;
 
     // ADMIN / SUPER_ADMIN (future use)
     private String role;
@@ -61,12 +61,12 @@ public class Admin {
         this.email = email;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
     public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+        this.password = password;
     }
 
     public String getRole() {

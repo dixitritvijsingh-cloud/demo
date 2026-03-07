@@ -27,6 +27,7 @@ public class Doctor {
     private String hospitalName;
     private Double rating;
     private String address;
+    private String password;
 
     // ---------- CONSTRUCTORS ----------
 
@@ -138,4 +139,13 @@ public class Doctor {
     public void setAddress(String address) {
         this.address = address;
     }
+
+public String getPassword() {
+    return password;
+}
+
+public void setPassword(String password) {
+    this.password = password;
+}
+
 }

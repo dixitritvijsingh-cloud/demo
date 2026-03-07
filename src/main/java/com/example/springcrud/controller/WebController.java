@@ -13,11 +13,31 @@ public class WebController {
         return "index";
     }
 
+    // ================= AUTH LOGIN (Single login for all roles) =================
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login";
+    }
+
+    // ================= PATIENT DASHBOARD =================
+    @GetMapping("/patient/dashboard")
+    public String patientDashboard(Model model) {
+        model.addAttribute("pageTitle", "Patient Dashboard");
+        model.addAttribute("activeTab", "dashboard");
+        return "patients/patient-dashboard";
+    }
+
+    // ================= DOCTOR DASHBOARD =================
+    @GetMapping("/doctor/dashboard")
+    public String doctorDashboard(Model model) {
+        model.addAttribute("pageTitle", "Doctor Dashboard");
+        model.addAttribute("activeTab", "dashboard");
+        return "doctor/doctor-dashboard";
+    }
+
     // ================= ADMIN PANEL ROUTES =================
     @GetMapping("/admin")
-    public String adminDashboard(Model model) {
-        model.addAttribute("pageTitle", "Dashboard");
-        model.addAttribute("activeTab", "dashboard");
+    public String adminDashboard() {
         return "admin/dashboard";
     }
 
@@ -62,4 +82,5 @@ public class WebController {
         model.addAttribute("activeTab", "profile");
         return "admin/profile";
     }
+
 }
